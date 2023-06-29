@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>WebP Compressor</title>
+  <title>WebP File Compression</title>
+  <script src="https://cdn.jsdelivr.net/npm/webp-converter@2.2.3/dist/webpconverter.min.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <input type="file" id="fileInput" accept=".webp">
-  <button id="compressButton">Compresser</button>
-  <a id="downloadLink" style="display: none;" download></a>
+  <h1 id="titleWebP">WebP File Compression</h1>
+  <div class="WebPdiv">
+  <input type="file" id="fileInput" accept="image/webp">
+  <button onclick="compress()" id="Compress">Compress</button>
+  <button onclick="clearFile()" id="Delete">Delete</button>
+  </div>
+  <a href="#" id="downloadLink" style="display: none;">Download</a>
   
-  <script src="compressor.js"></script>
-  <script src="main.js"></script>
+  <script src="webp.js"></script>
 </body>
 </html>
